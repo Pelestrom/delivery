@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-icon {
+  background: none;
+  border: none;
+}
+
+.vehicle-popup .leaflet-popup-content {
+  margin: 0;
+}
+
+.vehicle-popup .leaflet-popup-content-wrapper {
+  padding: 0;
+  border-radius: 0.5rem;
+}
+
+.leaflet-popup-close-button {
+  padding: 8px !important;
+}
+
+/* Style pour l'historique des déplacements */
+.leaflet-polyline {
+  stroke-dasharray: 5, 10;
+  animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
